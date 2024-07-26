@@ -61,7 +61,7 @@ int main(int argc, char** argv)
     const char* for_train = for_list[for_train_num % 21];
     const char* type_train = type_list[type_train_num % 5];
 
-    if (type_train != "\033[1;37;44m各駅停車")
+    if (type_train_num != 0)
     {
         std::cout << "\033[1m[通過] ";
     }
