@@ -1,7 +1,6 @@
 /**
  * @file RecycleBinGenerator.cpp
  * @author matsumoto-
- * @attention フォルダやファイルの置き換えをしてしまう可能性がございますのでご注意ください。
  * @brief ごみ箱ジェネレーター
  * Windows 11 Pro / gcc 13.2.0 によってコンパイルしました。-> RecycleBinGenerator.exe
  */
