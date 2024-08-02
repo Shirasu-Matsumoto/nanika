@@ -3,8 +3,19 @@
 #include <ctime>
 #include <random>
 
-bool detect_c(char **__detecting_array_, int __detecting_array_size_, const char *__detecting_index_)
+int sizeof_c(char **__sizeof_char_)
 {
+    int i = 0;
+    while (__sizeof_char_[i] != __null)
+    {
+        i++;
+    }
+    return i;
+}
+
+bool detect_c(char **__detecting_array_, const char *__detecting_index_)
+{
+    int __detecting_array_size_ = sizeof_c(__detecting_array_);
     for (int i = 0; i < __detecting_array_size_; ++i) {
         if (std::strcmp(__detecting_array_[i], __detecting_index_) == 0) {
             return true;
@@ -31,12 +42,12 @@ int main(int argc, char **argv)
 
     if (argc > 1)
     {
-        if (detect_c(argv, argc, "-?") || detect_c(argv, argc, "/?") || detect_c(argv, argc, "-h") || detect_c(argv, argc, "/h"))
+        if (detect_c(argv, "-?") || detect_c(argv, "/?") || detect_c(argv, "-h") || detect_c(argv, "/h"))
         {
             help();
             return 0;
         }
-        else if (detect_c(argv, argc, "-i") || detect_c(argv, argc, "/i"))
+        else if (detect_c(argv, "-i") || detect_c(argv, "/i"))
         {
             std::cout << " >> ";
             std::cin >> for_train_num;
